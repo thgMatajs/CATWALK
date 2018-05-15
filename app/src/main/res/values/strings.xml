@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CATWALK</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="senha">Senha</string>
+    <string name="cadastre_se">Cadastrar</string>
+    <string name="entrar">Entrar</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="campo_obrigatorio">Este campo é de preenchimento obrigatorio</string>
+    <string name="salvar">Salvar</string>
+    <string name="calendario">Calendário</string>
+    <string name="camera">Câmera</string>
+    <string name="localizacao">Mapa</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="search_hint">Entre com o endereço, Cidade ou CEP</string>
+    <string name="minha_localizacao">Minha Localização</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.CalendarioFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/calendario_tv_nome_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/calendario_iv_time"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintEnd_toStartOf="@+id/calendario_tv_hora"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calendario_tv_nome_cidade" />
+
+        <TextView
+            android:id="@+id/calendario_tv_hora"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/calendario_iv_time"
+            app:layout_constraintEnd_toStartOf="@+id/calendario_iv_clima"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calendario_iv_time"
+            app:layout_constraintTop_toTopOf="@+id/calendario_iv_time" />
+
+        <ProgressBar
+            android:id="@+id/calendario_progress_weather"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:layout_constraintBottom_toBottomOf="@+id/calendario_iv_clima"
+            app:layout_constraintEnd_toEndOf="@+id/calendario_tv_temp"
+            app:layout_constraintStart_toStartOf="@+id/calendario_iv_clima"
+            app:layout_constraintTop_toTopOf="@+id/calendario_tv_temp" />
+
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/calendario_iv_clima"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/calendario_tv_hora"
+            app:layout_constraintEnd_toStartOf="@+id/calendario_tv_temp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calendario_tv_hora"
+            app:layout_constraintTop_toTopOf="@+id/calendario_tv_hora"
+            app:materialIcon="weather_night"
+            app:materialIconColor="#9E9E9E"
+            app:materialIconSize="42dp" />
+
+        <TextView
+            android:id="@+id/calendario_tv_temp"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text=""
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/calendario_iv_clima"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calendario_iv_clima"
+            app:layout_constraintTop_toTopOf="@+id/calendario_iv_clima" />
+
+        <CalendarView
+            android:id="@+id/calendario_calendar_v"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendario_iv_time" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

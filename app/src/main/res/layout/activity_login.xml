@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.LoginActivity">
+
+    <TextView
+
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:text="CatWalk"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/ti_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toTopOf="@id/ti_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/login_edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/login_btn_cadastar"
+        app:layout_constraintEnd_toEndOf="@id/ti_email"
+        app:layout_constraintStart_toStartOf="@id/ti_email"
+        app:layout_constraintTop_toBottomOf="@id/ti_email"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/login_edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/senha"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/login_btn_cadastar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/cadastre_se"
+        app:layout_constraintBaseline_toBaselineOf="@id/login_btn_entrar"
+        app:layout_constraintBottom_toBottomOf="@id/login_btn_entrar"
+        app:layout_constraintEnd_toStartOf="@id/login_btn_entrar"
+        app:layout_constraintStart_toStartOf="@id/ti_password"
+        app:layout_constraintTop_toBottomOf="@id/ti_password"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/login_btn_entrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/entrar"
+        app:layout_constraintBottom_toTopOf="@id/tv_ou"
+        app:layout_constraintEnd_toEndOf="@id/ti_password"
+        app:layout_constraintStart_toEndOf="@id/login_btn_cadastar"
+        app:layout_constraintTop_toTopOf="@id/login_btn_cadastar"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+    <TextView
+        android:id="@+id/tv_ou"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Entar com:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/login_btn_google"
+        app:layout_constraintEnd_toEndOf="@id/ti_password"
+        app:layout_constraintStart_toStartOf="@id/ti_password"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_entrar" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/login_btn_google"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_ou"
+        app:layout_constraintStart_toStartOf="@id/tv_ou"
+        app:layout_constraintTop_toBottomOf="@id/tv_ou" />
+</android.support.constraint.ConstraintLayout>
