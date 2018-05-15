@@ -27,7 +27,6 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
-import com.squareup.timessquare.CalendarPickerView;
 import com.thgmobi.catwalk.MainActivity;
 import com.thgmobi.catwalk.R;
 import com.thgmobi.catwalk.models.weather.WeatherData;

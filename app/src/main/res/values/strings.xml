@@ -14,4 +14,7 @@
 
     <string name="search_hint">Entre com o endereço, Cidade ou CEP</string>
     <string name="minha_localizacao">Minha Localização</string>
+    <string name="ou">OU</string>
+    <string name="catwalk">CatWalk</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
